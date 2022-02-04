@@ -4,4 +4,30 @@ class MathController < ApplicationController
   render({:template => "calculation_templates/subtract_form.html.erb"})
  end
 
+def subtraction_result
+  #Parameters: {"first_num"=>"3", "second_num"=>"3"}
+
+  @first_num = params.fetch("first_num").to_f
+  @second_num = params.fetch("second_num").to_f
+
+  @sub_result = @first_num - @second_num
+
+  render({:template => "calculation_templates/subtract_result.html.erb"})
+end
+
+def add_form
+  render({:template => "calculation_templates/add_form.html.erb"})
+ end
+
+def add_result
+  #Parameters: {"first_num"=>"3", "second_num"=>"3"}
+
+  @first_num = params.fetch("first_num").to_f
+  @second_num = params.fetch("second_num").to_f
+
+  @add_result = @first_num + @second_num
+
+  render({:template => "calculation_templates/add_result.html.erb"})
+end
+
 end
