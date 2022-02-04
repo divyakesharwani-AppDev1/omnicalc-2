@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get("/wizard_subtract",{:controller=>"math",:action=>"subtraction_result"})
   get("/add",{:controller=>"math",:action=>"add_form"})
   get("/wizard_add",{:controller=>"math",:action=>"add_result"})
+  get("/multiply",{:controller=>"math",:action=>"multiply_form"})
+  get("/wizard_multiply",{:controller=>"math",:action=>"multiply_result"})
 
 
   

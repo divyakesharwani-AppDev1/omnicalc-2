@@ -30,4 +30,19 @@ def add_result
   render({:template => "calculation_templates/add_result.html.erb"})
 end
 
+def multiply_form
+  render({:template => "calculation_templates/multiply_form.html.erb"})
+ end
+
+def multiply_result
+  #Parameters: {"first_num"=>"3", "second_num"=>"3"}
+
+  @first_num = params.fetch("first_num").to_f
+  @second_num = params.fetch("second_num").to_f
+
+  @multiply_result = @first_num + @second_num
+
+  render({:template => "calculation_templates/multiply_result.html.erb"})
+end
+
 end
