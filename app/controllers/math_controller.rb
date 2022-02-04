@@ -40,7 +40,7 @@ def multiply_result
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
-  @multiply_result = @first_num + @second_num
+  @multiply_result = @first_num*@second_num
 
   render({:template => "calculation_templates/multiply_result.html.erb"})
 end
