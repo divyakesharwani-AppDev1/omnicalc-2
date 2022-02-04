@@ -45,4 +45,20 @@ def multiply_result
   render({:template => "calculation_templates/multiply_result.html.erb"})
 end
 
+def divide_form
+  render({:template => "calculation_templates/divide_form.html.erb"})
+ end
+
+def divide_result
+  #Parameters: {"first_num"=>"3", "second_num"=>"3"}
+
+  @first_num = params.fetch("first_num").to_f
+  @second_num = params.fetch("second_num").to_f
+
+  @divide_result = @first_num/@second_num
+
+  render({:template => "calculation_templates/divide_result.html.erb"})
 end
+
+end
+
